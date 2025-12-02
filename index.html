@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aapke liye</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body id="login-body">
+
+    <div class="container">
+        <div class="box">
+
+            <span class="title">Log-in</span><br>
+            <div>
+                <div id="form-container">
+                    <form id="login-form" onsubmit="return validateLogin()">
+
+                        <div id="username-box">
+                            <label>Username:</label>
+                            <input type="text" id="username">
+                        </div>
+
+                        <div id="password-box">
+                            <label>Password:</label>
+                            <input type="password" id="password">
+                        </div><br>
+
+                        <div id="login-button-box">
+                            <button type="submit" id="login-button">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="forgot-box">
+                    <button id="forgot-button" onclick="window.location.href='trial.html'">
+                        Don't know password or username?
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === "pratuthegreatestcutu" && pass === "baunihumai") {
+                window.location.href = "dashboard.html";
+                return false;
+            } else {
+                alert("Wrong username or password");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
